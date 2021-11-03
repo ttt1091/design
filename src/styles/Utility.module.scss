@@ -1,0 +1,20 @@
+.button{
+  display: block;
+  padding: .75rem .25rem;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #CCC;
+  text-align: center;
+}
+
+@for $m from 0 through 16 {
+  .m#{$m} {
+    margin: $m + px;
+  }
+}
+@for $mt from 0 through 16 {
+  .mt#{$mt} {
+    margin-top: $mt + px;
+  }
+}
