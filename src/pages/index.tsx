@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Link
-          href={`about`}>
+         href={`about`}>
           <a className={`${utility.button}  ${utility.m8}`}>About</a>
         </Link>
       </main>
