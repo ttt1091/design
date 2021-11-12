@@ -9,7 +9,7 @@ import { db } from "../../firebase/firebase_init";
 import { Heading } from '@chakra-ui/react';
 import { Button, ButtonGroup } from "@chakra-ui/react"
 import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react"
-
+import { Editable, EditableInput, EditablePreview } from "@chakra-ui/react"
 
 export default function Home() {
   return (
@@ -26,6 +26,10 @@ export default function Home() {
           <div>contents wrapped</div>
           <div>won't be visible</div>
         </Skeleton>
+        <Editable defaultValue="ここにタッチ">
+          <EditablePreview />
+          <EditableInput />
+        </Editable>
         https://fwywd.com/tech/next-chakra-ui<br />
         https://chakra-ui.com/<br />
         https://twilight-pirate-7d9.notion.site/76fdc572356f485abb8af170bced96f6?v=e4eeecb1321c47539f59871b0e7a5966<br />
