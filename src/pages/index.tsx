@@ -6,6 +6,10 @@ import Image from 'next/image'
 import styles from '../styles/Main.module.scss'
 import utility from '../styles/Utility.module.scss'
 import { db } from "../../firebase/firebase_init";
+import { Heading } from '@chakra-ui/react';
+import { Button, ButtonGroup } from "@chakra-ui/react"
+import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react"
+
 
 export default function Home() {
   return (
@@ -16,6 +20,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Heading color="red">Hello, Next.js with Chakra UI</Heading>
+        <Button colorScheme="blue">Button</Button>
+        <Skeleton>
+          <div>contents wrapped</div>
+          <div>won't be visible</div>
+        </Skeleton>
+        https://fwywd.com/tech/next-chakra-ui<br />
+        https://chakra-ui.com/<br />
         <Link
          href={`about`}>
           <a className={`${utility.button}  ${utility.m8}`}>About</a>
