@@ -19,7 +19,15 @@ const Layout = ({ children, home }: Props) => {
       <Head>
         <meta name="format-detection" content="telephone=no" />
       </Head>
-      <HeaderBar />
+        {home ? (
+          <>
+            <HeaderBar />
+          </>
+        ) : (
+          <>
+            <HeaderBar />
+          </>
+        )}
       <div className={styles.container}>
         {home ? (
           <>
