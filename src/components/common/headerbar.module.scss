@@ -1,0 +1,39 @@
+.headerBar{
+  height: 57px;
+  border-bottom: solid 1px #DDD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.hide{
+  display: none;
+}
+.openMenu{
+  min-height: calc(100vh - 57px);
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 100vw;
+  z-index: 99;
+  color: #FFF;
+  background-color: rgba($color: #000000, $alpha: .7);
+}
+
+.fadeIn{
+  opacity: 1;
+  animation: fadeIn 1.5s ease 1 normal;
+}
+.fadeOut{
+  animation: fadeOut 1s ease 1 normal;
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+@keyframes fadeOut {
+  0% {opacity: 1}
+  100% {opacity: 0}
+}

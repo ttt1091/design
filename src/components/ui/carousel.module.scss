@@ -1,0 +1,12 @@
+@use "../../styles/variables" as *;
+
+.carousel{
+  height: 200px;
+  width: 100%;
+  background-color: #EEE;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  @include mq-up(md) {
+    height: 410px;
+  }
+}
