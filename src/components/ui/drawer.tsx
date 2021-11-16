@@ -24,7 +24,7 @@ const DrawerMenu = () => {
     setSize(newSize)
     onOpen()
   }
-  const sizes = ["xs", "sm"]
+  const sizes = ["xs", "sm", "md", "lg", "xl", "full"]
 
   const router = useRouter();
   console.log(router.pathname)
@@ -38,7 +38,6 @@ const DrawerMenu = () => {
     <>
       <IconButton
         onClick={() => handleClick(`xs`)}
-        key={`xs`}
         aria-label="MainMenu"
         icon={<HamburgerIcon />}
       />
@@ -46,6 +45,7 @@ const DrawerMenu = () => {
       <Drawer onClose={onClose} isOpen={isOpen} size={size}>
         <DrawerOverlay />
         <DrawerContent>
+          <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
             <div>

@@ -1,17 +1,20 @@
 import { ReactNode } from "react";
 import Styles from './layout.module.scss';
 import Link from 'next/link'
-import utility from '../styles/Utility.module.scss'
 import HeaderBar from '@/components/common/headerBar'
 import Carousel from '@/components/ui/carousel'
 import Footer from '@/components/common/footer'
 import { ChatIcon } from '@chakra-ui/icons'
+import { Text } from "@chakra-ui/react"
 import Head from 'next/head'
 import {NextPage} from 'next'
+
+
 interface Props {
   children?: ReactNode;
   home?: ReactNode;
 }
+
 
 const Layout:NextPage<Props> = ({ children, home }: Props) => {
   return (
@@ -45,7 +48,7 @@ const Layout:NextPage<Props> = ({ children, home }: Props) => {
               <Link href={`/`}>
                 <a>
                   <ChatIcon />
-                  問い合わせ
+                  <Text fontSize="xs">問い合わせ</Text>
                 </a>
               </Link>
             </div>

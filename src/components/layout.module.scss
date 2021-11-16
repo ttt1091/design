@@ -2,10 +2,10 @@
 
 .message{
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 15px;
+  right: 15px;
   height: 50px;
-  width: 50px;
+  width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,4 +13,8 @@
   border-radius: .25rem;
   background-color: #FFF;
   z-index: 999;
+  a{
+    display: block;
+    text-align: center;
+  }
 }
