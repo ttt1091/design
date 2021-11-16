@@ -27,7 +27,7 @@ const DrawerMenu = () => {
   const sizes = ["xs", "sm", "md", "lg", "xl", "full"]
 
   const router = useRouter();
-  console.log(router.pathname)
+  // console.log(router.pathname)
 
   const pages = [
     { url: "/", title: "Home", },

@@ -23,15 +23,7 @@ const Layout:NextPage<Props> = ({ children, home }: Props) => {
         <meta name="format-detection" content="telephone=no" />
         <title>YoYos</title>
       </Head>
-        {home ? (
-          <>
-            <HeaderBar />
-          </>
-        ) : (
-          <>
-            <HeaderBar />
-          </>
-        )}
+      <HeaderBar />
       <div>
         {home ? (
           <>

@@ -2,17 +2,24 @@ import Styles from './headerbar.module.scss'
 import Link from 'next/link'
 import Drawer from '@/components/ui/drawer'
 // import { ST } from 'next/dist/shared/lib/utils'
+import { useRouter } from "next/router";
 
 const HeaderBar = () => {
-
+  const router = useRouter();
   return (
     <>
       <header className={Styles.headerBar}>
         <div>　</div>
         <div>
-          <Link href="/">
-            <a>Header</a>
-          </Link>
+          {router.pathname === "/" ? (
+            <Link href="/">
+              <a><h1>Header</h1></a>
+            </Link>
+          ) : (
+            <Link href="/">
+              <a>Header</a>
+            </Link>
+          )}
         </div>
         <div>
           <Drawer />
