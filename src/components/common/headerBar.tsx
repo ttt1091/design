@@ -17,7 +17,11 @@ const HeaderBar = () => {
     <React.Fragment>
       <header className={Styles.headerBar}>
         <div>　</div>
-        <div>header</div>
+        <div>
+          <Link href="/">
+            <a>Header</a>
+          </Link>
+        </div>
         <div className={openMenu ? Styles.hide : `${Styles.fadeIn} ${Styles.openMenu}`}>
           <Link
           href={`/about`}>

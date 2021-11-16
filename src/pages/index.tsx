@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Main.module.scss'
 import utility from '../styles/Utility.module.scss'
-import { db } from "../../firebase/firebase_init";
+// import { db } from "../../firebase/firebase_init";
 import { Container } from "@chakra-ui/react"
 import { Box } from "@chakra-ui/react"
 import Dynamic from 'next/dynamic'
@@ -59,24 +59,24 @@ export default function Home() {
 
 
 
-export function getStaticProps(){
-  const ref = db.collection("users");
-  const users_snapshot = ref.get();
-  let getUser = JSON.parse('[]');
-  users_snapshot.then((users) =>
-    users.forEach((user) => {
-      console.log(
-        `id: ${user.id}, name: ${user.data().name}, age: ${user.data().age}`
-      );
-      let views = JSON.parse(`{"id":"${user.id}", "name": "${user.data().name}", "age": ${user.data().age}}`);
-      console.log(views);
-      getUser.push(views);
-      console.log(getUser);
-    })
-  );
-	return {
-		props: {
-      getUser
-    }
-	}
-}
+// export function getStaticProps(){
+//   const ref = db.collection("users");
+//   const users_snapshot = ref.get();
+//   let getUser = JSON.parse('[]');
+//   users_snapshot.then((users) =>
+//     users.forEach((user) => {
+//       console.log(
+//         `id: ${user.id}, name: ${user.data().name}, age: ${user.data().age}`
+//       );
+//       let views = JSON.parse(`{"id":"${user.id}", "name": "${user.data().name}", "age": ${user.data().age}}`);
+//       console.log(views);
+//       getUser.push(views);
+//       console.log(getUser);
+//     })
+//   );
+// 	return {
+// 		props: {
+//       getUser
+//     }
+// 	}
+// }

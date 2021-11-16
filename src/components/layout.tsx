@@ -35,11 +35,6 @@ const Layout = ({ children, home }: Props) => {
           </>
         ) : (
           <>
-            <Link href="/">
-              <a className={`${utility.button}  ${utility.m8}`}>
-                Not home
-              </a>
-            </Link>
           </>
         )}
         <header className={ home ? styles.homeHeader : styles.otherHeader }>{siteName}</header>
