@@ -6,8 +6,6 @@ const Carousel = () => {
     <section className={Styles.carousel}>
       <Image
        src="/images/375x200.png"
-       width={375}
-       height={200}
        layout={"fill"}
        objectFit={"cover"}
        alt="carousel"

@@ -1,6 +1,16 @@
-.homeHeader{
-  height: 2rem;
-}
-.otherHeader{
-  height: 1rem;
+
+
+.message{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #CCC;
+  border-radius: .25rem;
+  background-color: #FFF;
+  z-index: 999;
 }

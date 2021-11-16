@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout from '@/components/layout'
 import Image from 'next/image'
 import styles from '../styles/Main.module.scss'
 import { Code } from "@chakra-ui/react"
