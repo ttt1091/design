@@ -8,10 +8,15 @@ import {
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
-  Button
+  Box,
+  IconButton
 } from "@chakra-ui/react"
+import { HamburgerIcon } from '@chakra-ui/icons'
+import Link from 'next/link'
+import { useRouter } from "next/router";
 
-function SizeExample() {
+
+const DrawerMenu = () => {
   const [size, setSize] = React.useState("md")
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -19,30 +24,48 @@ function SizeExample() {
     setSize(newSize)
     onOpen()
   }
+  const sizes = ["xs", "sm"]
 
-  const sizes = ["xs", "sm", "md", "lg", "xl", "full"]
+  const router = useRouter();
+  console.log(router.pathname)
+
+  const pages = [
+    { url: "/", title: "Home", },
+    { url: "/about", title: "About", }
+  ]
 
   return (
     <>
-      {sizes.map((size) => (
-        <Button
-          onClick={() => handleClick(size)}
-          key={size}
-          m={4}
-        >{`Open ${size} Drawer`}</Button>
-      ))}
+      <IconButton
+        onClick={() => handleClick(`xs`)}
+        key={`xs`}
+        aria-label="MainMenu"
+        icon={<HamburgerIcon />}
+      />
 
       <Drawer onClose={onClose} isOpen={isOpen} size={size}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader>{`${size} drawer contents`}</DrawerHeader>
+          <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
-            {size === "full"
-              ? `You're trapped 😆 , refresh the page to leave or press 'Esc' key.`
-              : null}
+            <div>
+              {pages.map(items => (
+                <Box mb={6} key={items.title}>
+                  {router.pathname === items.url ? (
+                    <a href={items.url}>{items.title}</a>
+                  ) : (
+                    <Link href={items.url}>
+                      <a>{items.title}</a>
+                    </Link>
+                  )
+                  }
+                </Box>
+              ))}
+            </div>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
   )
 }
+export default DrawerMenu;
