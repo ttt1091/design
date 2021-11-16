@@ -4,6 +4,7 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import { CloseIcon } from '@chakra-ui/icons'
 import React, {useState} from "react"
 import Link from 'next/link'
+// import { ST } from 'next/dist/shared/lib/utils'
 
 const HeaderBar = () => {
   const [openMenu, setOpenMenu] = useState(true);
@@ -22,13 +23,13 @@ const HeaderBar = () => {
             <a>Header</a>
           </Link>
         </div>
-        <div className={openMenu ? Styles.hide : `${Styles.fadeIn} ${Styles.openMenu}`}>
+        <div className={openMenu ? `${Styles.hide} ${Styles.mainNav}` : `${Styles.fadeIn} ${Styles.openMenu}`}>
           <Link
           href={`/about`}>
             <a>About</a>
           </Link>
         </div>
-        <div>
+        <div className={Styles.menuBtn}>
           {openMenu ? (
             <>
               <IconButton aria-label="Search database" icon={<HamburgerIcon />} onClick={() => menuFunction()} />

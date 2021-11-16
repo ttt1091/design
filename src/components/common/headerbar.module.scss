@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .headerBar{
   height: 57px;
   border-bottom: solid 1px #DDD;
@@ -16,6 +18,13 @@
 .hide{
   display: none;
 }
+.mainNav{
+  z-index: 99;
+  @include mq-up(xl ){
+    display: block;
+    z-index: 0;
+  }
+}
 .openMenu{
   min-height: calc(100vh - 57px);
   position: fixed;
@@ -25,6 +34,13 @@
   z-index: 99;
   color: #FFF;
   background-color: rgba($color: #000000, $alpha: .7);
+}
+
+.menuBtn{
+  display: block;
+  @include mq-up(xl ){
+    display: none;
+  }
 }
 
 .fadeIn{

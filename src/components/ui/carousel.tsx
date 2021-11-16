@@ -8,7 +8,8 @@ const Carousel = () => {
        src="/images/375x200.png"
        width={375}
        height={200}
-       layout="responsive"
+       layout={"fill"}
+       objectFit={"cover"}
        alt="carousel"
       />
     </section>

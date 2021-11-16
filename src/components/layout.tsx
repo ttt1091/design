@@ -11,7 +11,6 @@ interface Props {
   children?: ReactNode;
   home?: ReactNode;
 }
-const siteName = "title";
 
 const Layout = ({ children, home }: Props) => {
   return (
@@ -37,7 +36,6 @@ const Layout = ({ children, home }: Props) => {
           <>
           </>
         )}
-        <header className={ home ? styles.homeHeader : styles.otherHeader }>{siteName}</header>
         <main>{children}</main>
         {!home && (
           <>
