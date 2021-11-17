@@ -5,7 +5,7 @@ import styles from '@/styles/Main.module.scss'
 import utility from '../styles/Utility.module.scss'
 // import { db } from "../../firebase/firebase_init";
 import { Container } from "@chakra-ui/react"
-import { Box } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 import dynamic from 'next/dynamic'
 const ScrollRevealContainer = dynamic(
   import('../lib/ScrollRevealContainer'),
@@ -13,8 +13,7 @@ const ScrollRevealContainer = dynamic(
 );
 
 
-
-export default function Home() {
+const Home = () => {
   return (
     <Layout home>
       <Head>
@@ -24,7 +23,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
           <Box minH="340px" bg="aliceblue" color="black">
-            section 1
+            <Text as="h2">section 1</Text>
           </Box>
           <ScrollRevealContainer>
             <Box minH="340px" bg="lavender" color="black">
@@ -45,6 +44,7 @@ export default function Home() {
     </Layout>
   )
 }
+export default Home;
 
 
 

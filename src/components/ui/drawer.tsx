@@ -9,7 +9,11 @@ import {
   DrawerCloseButton,
   useDisclosure,
   Box,
-  IconButton
+  IconButton,
+  Stack,
+  HStack,
+  VStack ,
+  StackDivider
 } from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
@@ -48,9 +52,13 @@ const DrawerMenu = () => {
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
-            <div>
+            <VStack
+              divider={<StackDivider borderColor="gray.200" />}
+              spacing={4}
+              align="stretch"
+            >
               {pages.map(items => (
-                <Box mb={6} key={items.title}>
+                <Box key={items.title}>
                   {router.pathname === items.url ? (
                     <a href={items.url}>{items.title}</a>
                   ) : (
@@ -61,7 +69,7 @@ const DrawerMenu = () => {
                   }
                 </Box>
               ))}
-            </div>
+            </VStack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
