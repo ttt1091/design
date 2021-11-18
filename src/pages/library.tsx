@@ -13,26 +13,12 @@ const Library: NextPage = () => {
       <Head>
         <title>Library</title>
       </Head>
-      <Grid
-        h="200px"
-        templateRows="repeat(auto, 1fr)"
-        templateColumns="repeat(2, 1fr)"
-        gap={4}
-      >
-        <GridItem colSpan={1} bg="tomato">
-          aaa<br />
-          aaa<br />
-          aaa<br />
-          aaa<br />
-          aaa<br />
-          aaa<br />
-        </GridItem>
-        <GridItem colSpan={1} bg="papayawhip" />
-        <GridItem colSpan={1} bg="papayawhip" />
-        <GridItem colSpan={1} bg="tomato" />
-        <GridItem colSpan={1} bg="tomato" />
-        <GridItem colSpan={1} bg="tomato" />
-      </Grid>
+      <div>
+        <div>aaa</div>
+        <div>bbb</div>
+        <div>ccc</div>
+        <div>ddd</div>
+      </div>
     </Layout>
   )
 }
