@@ -35,7 +35,8 @@ const DrawerMenu = () => {
 
   const pages = [
     { url: "/", title: "Home", },
-    { url: "/about", title: "About", }
+    { url: "/about", title: "About", },
+    { url: "/library", title: "Librarys", }
   ]
 
   return (

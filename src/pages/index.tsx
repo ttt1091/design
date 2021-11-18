@@ -24,14 +24,14 @@ const Home = () => {
       </Head>
       <div className={styles.container}>
         <section>
-          <Box minH="340px" bg="aliceblue" color="black" m="3">
+          <Box minH="340px" bg="aliceblue" color="black" p="3">
             <Grid
-              h="200px"
+              h="340px"
               templateRows="repeat(2, 1fr)"
               templateColumns="repeat(6, 1fr)"
               gap={4}
             >
-              <GridItem rowSpan={2} colSpan={3}>
+              <GridItem colSpan={3}>
                 <Center>
                   <Text className={`yujiSyuku`} as="h2" fontSize="xl">あいうえお</Text>
                 </Center>
@@ -39,7 +39,7 @@ const Home = () => {
                   aaaaa
                 </Box>
               </GridItem>
-              <GridItem rowSpan={2} colSpan={3} bg="papayawhip">
+              <GridItem colSpan={3} bg="papayawhip">
                 Image
               </GridItem>
               <GridItem colSpan={6} bg="papayawhip" p="2">
@@ -49,21 +49,85 @@ const Home = () => {
             </Grid>
           </Box>
         </section>
-          <ScrollRevealContainer>
-            <Box minH="340px" bg="lavender" color="black">
-              section 2
+        <section>
+          <Box minH="340px" bg="lavender" color="black" p="3">
+            <Grid
+              h="340px"
+              templateRows="repeat(2, 1fr)"
+              templateColumns="repeat(6, 1fr)"
+              gap={4}
+            >
+              <GridItem colSpan={3} bg="papayawhip">
+                
+              </GridItem>
+              <GridItem colSpan={3}>
+                <Center>
+                  <Text className={`sawarabiMincho`} as="h2" fontSize="xl">違うフォント</Text>
+                </Center>
+                <Box fontSize="lg">
+                    
+                </Box>
+              </GridItem>
+              <GridItem colSpan={6} bg="papayawhip" p="2">
+
+              </GridItem>
+            </Grid>
+          </Box>
+        </section>
+        <ScrollRevealContainer>
+          <section>
+            <Box minH="340px" bg="lightyellow" color="black" p="3">
+              <Grid
+                h="340px"
+                templateRows="repeat(2, 1fr)"
+                templateColumns="repeat(6, 1fr)"
+                gap={4}
+              >
+                <GridItem colSpan={3}>
+                  <Center>
+                    <Text className={`yujiSyuku`} as="h2" fontSize="xl">section 3</Text>
+                  </Center>
+                  <Box fontSize="lg">
+                      
+                  </Box>
+                </GridItem>
+                <GridItem colSpan={3} bg="papayawhip">
+                  
+                </GridItem>
+                <GridItem colSpan={6} bg="papayawhip" p="2">
+
+                </GridItem>
+              </Grid>
             </Box>
-          </ScrollRevealContainer>
-          <ScrollRevealContainer>
-            <Box minH="340px" bg="lightyellow" color="black">
-              section 3
+          </section>
+        </ScrollRevealContainer>
+        <ScrollRevealContainer>
+          <section>
+            <Box minH="340px" bg="gainsboro" color="black" p="3">
+              <Grid
+                h="340px"
+                templateRows="repeat(2, 1fr)"
+                templateColumns="repeat(6, 1fr)"
+                gap={4}
+              >
+                <GridItem colSpan={3}>
+                  <Center>
+                    <Text className={`yujiSyuku`} as="h2" fontSize="xl">section 4</Text>
+                  </Center>
+                  <Box fontSize="lg">
+                      
+                  </Box>
+                </GridItem>
+                <GridItem colSpan={3} bg="papayawhip">
+                  
+                </GridItem>
+                <GridItem colSpan={6} bg="papayawhip" p="2">
+
+                </GridItem>
+              </Grid>
             </Box>
-          </ScrollRevealContainer>
-          <ScrollRevealContainer>
-            <Box minH="340px" bg="gainsboro" color="black">
-              section 4
-            </Box>
-          </ScrollRevealContainer>
+          </section>
+        </ScrollRevealContainer>
       </div>
     </Layout>
   )
