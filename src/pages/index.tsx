@@ -5,7 +5,8 @@ import styles from '@/styles/Main.module.scss'
 import utility from '../styles/Utility.module.scss'
 // import { db } from "../../firebase/firebase_init";
 import { Container } from "@chakra-ui/react"
-import { Box, Heading, Text } from "@chakra-ui/react"
+import { Box, Heading, Text, Center } from "@chakra-ui/react"
+import { Grid, GridItem } from "@chakra-ui/react"
 import dynamic from 'next/dynamic'
 const ScrollRevealContainer = dynamic(
   import('../lib/ScrollRevealContainer'),
@@ -22,9 +23,29 @@ const Home = () => {
         <title>YoYos</title>
       </Head>
       <div className={styles.container}>
-          <Box minH="340px" bg="aliceblue" color="black">
-            <Text className={`yujiSyuku`} as="h2" fontSize="lg">私達の企業理念</Text>
+        <section>
+          <Box minH="340px" bg="aliceblue" color="black" m="3">
+            <Grid
+              h="200px"
+              templateRows="repeat(2, 1fr)"
+              templateColumns="repeat(6, 1fr)"
+              gap={4}
+            >
+              <GridItem rowSpan={2} colSpan={3}>
+                <Center>
+                  <Text className={`yujiSyuku`} as="h2" fontSize="lg">私達の企業理念</Text>
+                </Center>
+              </GridItem>
+              <GridItem rowSpan={2} colSpan={3} bg="papayawhip">
+                Image
+              </GridItem>
+              <GridItem colSpan={6} bg="tomato">
+                ここに文章が入ります。<br />
+                色々と書いてSEO効果を高めていきましょう。
+              </GridItem>
+            </Grid>
           </Box>
+        </section>
           <ScrollRevealContainer>
             <Box minH="340px" bg="lavender" color="black">
               section 2
