@@ -5,7 +5,7 @@ import styles from '@/styles/Main.module.scss'
 import utility from '../styles/Utility.module.scss'
 // import { db } from "../../firebase/firebase_init";
 import { Container } from "@chakra-ui/react"
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Heading, Text } from "@chakra-ui/react"
 import dynamic from 'next/dynamic'
 const ScrollRevealContainer = dynamic(
   import('../lib/ScrollRevealContainer'),
@@ -23,7 +23,7 @@ const Home = () => {
       </Head>
       <div className={styles.container}>
           <Box minH="340px" bg="aliceblue" color="black">
-            <Text as="h2">section 1</Text>
+            <Text className={`yujiSyuku`} as="h2" fontSize="lg">私達の企業理念</Text>
           </Box>
           <ScrollRevealContainer>
             <Box minH="340px" bg="lavender" color="black">
