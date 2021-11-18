@@ -33,13 +33,16 @@ const Home = () => {
             >
               <GridItem rowSpan={2} colSpan={3}>
                 <Center>
-                  <Text className={`yujiSyuku`} as="h2" fontSize="lg">私達の企業理念</Text>
+                  <Text className={`yujiSyuku`} as="h2" fontSize="xl">あいうえお</Text>
                 </Center>
+                <Box fontSize="lg">
+                  aaaaa
+                </Box>
               </GridItem>
               <GridItem rowSpan={2} colSpan={3} bg="papayawhip">
                 Image
               </GridItem>
-              <GridItem colSpan={6} bg="tomato">
+              <GridItem colSpan={6} bg="papayawhip" p="2">
                 ここに文章が入ります。<br />
                 色々と書いてSEO効果を高めていきましょう。
               </GridItem>
